@@ -1,0 +1,23 @@
+{
+  "name": "account-server",
+  "version": "1.0.0",
+  "description": "用户服务",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:debug": "node ./src/index.js --seneca.log.all | grep plugin:define",
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "deploy": "pm2 start deploy/deploy.config.js"
+  },
+  "keywords": [
+    "基础服务"
+  ],
+  "author": "Cecil",
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "vastify": "^1.0.2"
+  },
+  "devDependencies": {}
+}
