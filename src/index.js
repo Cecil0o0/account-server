@@ -1,13 +1,13 @@
 /*
  * @Author: Cecil 
  * @Last Modified by: Cecil
- * @Last Modified time: 2018-05-22 21:05:45
+ * @Last Modified time: 2018-05-23 20:53:14
  * @Description 用户服务入口文件
  */
 
 'use strict'
-const Vastify = require('vastify')
-const vast = new Vastify()
+const { Vast } = require('vastify')
+const vast = new Vast()
 const { seneca, web } = vast
 const app = web.app
 const userModule = require('./modules/user')

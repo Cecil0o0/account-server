@@ -1,26 +1,17 @@
 /*
  * @Author: Cecil 
  * @Last Modified by: Cecil
- * @Last Modified time: 2018-05-23 09:33:06
+ * @Last Modified time: 2018-05-23 20:50:41
  * @Description 无
  */
 'use strict'
 
-const Vastify = require("vastify")
+const { Vastify, deployTool} = require("vastify")
 const path = require('path')
-const vast = new Vastify({
-  pm2: {
-    deploy: {
-      production: {
-        'post-deploy': 'npm install && pm2 startOrRestart deploy/deploy.config.js --env production'
-      }
-    }
-  }
-})
 const { 
   GeneratePM2AppConfig,
   GeneratePM2DeployConfig
- } = vast.deployTool
+ } = deployTool
 const name = 'account-server'
 
 const processFile = {
