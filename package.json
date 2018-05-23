@@ -17,7 +17,8 @@
   "license": "MIT",
   "dependencies": {
     "amqplib": "^0.5.2",
-    "vastify": "^1.0.2"
+    "mongoose": "^5.1.2",
+    "vastify": "^1.0.8"
   },
   "devDependencies": {}
 }
