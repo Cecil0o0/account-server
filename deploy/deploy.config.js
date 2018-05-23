@@ -1,14 +1,20 @@
 /*
  * @Author: Cecil 
  * @Last Modified by: Cecil
- * @Last Modified time: 2018-05-23 09:03:56
+ * @Last Modified time: 2018-05-23 09:25:42
  * @Description 无
  */
 'use strict'
 
 const Vastify = require("vastify")
 const path = require('path')
-const vast = new Vastify()
+const vast = new Vastify({
+  pm2: {
+    deploy: {
+      'post-deploy': 'npm install && pm2 startOrRestart deploy/deploy.config.js --env production'
+    }
+  }
+})
 const { 
   GeneratePM2AppConfig,
   GeneratePM2DeployConfig
