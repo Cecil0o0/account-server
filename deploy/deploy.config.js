@@ -1,7 +1,7 @@
 /*
  * @Author: Cecil 
  * @Last Modified by: Cecil
- * @Last Modified time: 2018-05-23 09:25:42
+ * @Last Modified time: 2018-05-23 09:33:06
  * @Description 无
  */
 'use strict'
@@ -11,7 +11,9 @@ const path = require('path')
 const vast = new Vastify({
   pm2: {
     deploy: {
-      'post-deploy': 'npm install && pm2 startOrRestart deploy/deploy.config.js --env production'
+      production: {
+        'post-deploy': 'npm install && pm2 startOrRestart deploy/deploy.config.js --env production'
+      }
     }
   }
 })
