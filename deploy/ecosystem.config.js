@@ -1,12 +1,12 @@
 /*
  * @Author: Cecil 
  * @Last Modified by: Cecil
- * @Last Modified time: 2018-05-24 09:02:55
+ * @Last Modified time: 2018-05-24 09:15:40
  * @Description 无
  */
 'use strict'
 
-const { Vastify, deployTool} = require("vastify")
+const { deployTool } = require("vastify")
 const path = require('path')
 const { 
   GeneratePM2AppConfig,
