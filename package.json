@@ -12,7 +12,8 @@
     "start:debug": "node ./src/index.js --seneca.log.all | grep plugin:define",
     "start": "node ./src/index.js",
     "dev": "nodemon ./src/index.js",
-    "deploy": "pm2 start deploy/deploy.config.js"
+    "deploy:setup": "pm2 deploy deploy/ecosystem.config.js production setup",
+    "deploy:update": "pm2 deploy deploy/ecosystem.config.js production update"
   },
   "keywords": [
     "基础服务"
