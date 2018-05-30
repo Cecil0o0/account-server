@@ -1,18 +1,16 @@
 /*
  * @Author: Cecil 
  * @Last Modified by: Cecil
- * @Last Modified time: 2018-05-27 16:09:19
+ * @Last Modified time: 2018-05-30 14:44:49
  * @Description 无
  */
 'use strict'
 
-const { DeployTool } = require("vastify")
 const path = require('path')
-const deployTool = new DeployTool()
 const { 
   GeneratePM2AppConfig,
   GeneratePM2DeployConfig
- } = deployTool
+ } = require("vastify").getDeployTool()
 const name = 'account-server'
 
 const processFile = {
