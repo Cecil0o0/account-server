@@ -1,7 +1,7 @@
 /*
  * @Author: Cecil 
  * @Last Modified by: Cecil
- * @Last Modified time: 2018-05-30 14:44:49
+ * @Last Modified time: 2018-05-30 15:11:55
  * @Description 无
  */
 'use strict'
@@ -28,7 +28,8 @@ const processFile = {
       user: 'deploy',
       host: 'qingf.me',
       repo: 'https://github.com/Cecil0o0/account-server.git',
-      path: '/home/deploy/apps/account-server'
+      path: '/home/deploy/apps/account-server',
+      'post-deploy': 'rm -rf ./node_modules && npm install && pm2 startOrRestart deploy/ecosystem.config.js --env production'
     })
   }
 }
