@@ -1,3 +1,4 @@
 node_modules
 .vscode
 deploy/log/
+test/rest.http

@@ -1,16 +1,16 @@
 /*
  * @Author: Cecil 
  * @Last Modified by: Cecil
- * @Last Modified time: 2018-05-27 22:39:14
+ * @Last Modified time: 2018-05-31 10:00:08
  * @Description 该模块用于用户业务，即增删查改用户数据，但不做持久化存储，并对C端提供REST服务
  */
 'use strict'
 
-const vast = require('vastify').getIntance()
+const vastify = require('vastify')
+const vast = vastify.getInstance()
 const { VastifyWebModule } = vast.web
-const UserModel = require('./UserModel')
+const UserModel = require('../models/user')
 const $module = 'module:user'
-let userCount = 3
 
 const routes = [
   {

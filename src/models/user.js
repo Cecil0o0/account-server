@@ -1,4 +1,5 @@
-const vast = require('vastify').getIntance()
+const vastify = require('vastify')
+const vast = vastify.getInstance()
 const mongoose = vast.db
 let UserModel = mongoose.model('UserModel', {
   id: Number,
