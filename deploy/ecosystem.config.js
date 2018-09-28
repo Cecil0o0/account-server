@@ -7,10 +7,11 @@
 'use strict'
 
 const path = require('path')
+console.log(require("vastify"))
 const { 
   GeneratePM2AppConfig,
   GeneratePM2DeployConfig
- } = require("vastify").getDeployTool()
+ } = require("vastify").DeployTool
 const name = 'account-server'
 
 const processFile = {
